@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:36:28 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 16:07:17 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:22:46 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-		return (0);
+		return (ft_putstr("(null)"));
 	while (str[i] != 0)
 	{
 		write (1, &str[i], 1);

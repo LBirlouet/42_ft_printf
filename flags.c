@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:05:49 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 16:50:43 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:23:27 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ int	repartflag(const char c, va_list lst)
 
 	count = 0;
 	if (c == 'd' || c == 'i')
-		count = nbr_count(va_arg(lst, int));				// ok
+		count = nbr_count(va_arg(lst, int));
 	else if (c == 'x')
-		count = nbr_hexa(va_arg(lst, int), 0);				// ok juste verif si c'est int
+		count = nbr_hexa(va_arg(lst, int), 0);
 	else if (c == 'X')
-		count = nbr_hexa(va_arg(lst, int), 1);				// ok juste verif si c'est int
+		count = nbr_hexa(va_arg(lst, int), 1);
 	else if (c == 'c')
-		count = ft_putchar(va_arg(lst, int));				// ok
+		count = ft_putchar(va_arg(lst, int));
 	else if (c == 's')
-		count = ft_putstr(va_arg(lst, char *));	
+		count = ft_putstr(va_arg(lst, char *));
 	else if (c == 'u')
 		count = nbr_count_unsigned(va_arg(lst, unsigned int));
 	else if (c == 'p')

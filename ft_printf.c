@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:04:34 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 17:14:16 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:27:03 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ int	ft_printf2(const char *str, va_list lst)
 				i++;
 			}
 		}
-		else
-		{
+		else if (str[i] != 0)
 			j += ft_putchar(str[i]);
-		}
 		i++;
 	}
 	return (j);
@@ -49,23 +47,20 @@ int	ft_printf(const char *str, ...)
 	int		i;
 
 	if (!str)
-		return (0);
+		return (-1);
 	va_start(lst, str);
 	i = ft_printf2(str, lst);
 	va_end(lst);
 	return (i);
 }
 
-
 // int main()
 // {
 // 	unsigned char const *s;
 
 
-// 	int i = 1586422;
-// 	int j = ft_printf("%d %i %u %X %x %s %c %p\n", 15, 25, 35, 45, 55, "oui", 's', NULL);
-// 	printf("%d\n", j);
+// 	printf("%d\n", ft_printf("%%p"));
 
-// 	printf("%d\n", printf("%d %i %u %X %x %s %c %p\n", 15, 25, 35, 45, 55, "oui", 's', NULL));
+// 	printf("%d\n", printf("%%p"));
 
 // }

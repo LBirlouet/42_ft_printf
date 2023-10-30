@@ -6,12 +6,11 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:36:28 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 18:32:42 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:50:35 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 size_t	ft_strlen(const char *str)
 {

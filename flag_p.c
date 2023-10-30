@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_ft_printf.c                                  :+:      :+:    :+:   */
+/*   flag_p.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/27 15:36:28 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 16:07:17 by lbirloue         ###   ########.fr       */
+/*   Created: 2023/10/30 16:50:13 by lbirloue          #+#    #+#             */
+/*   Updated: 2023/10/30 16:59:03 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+void	ft_putnbr_adress(unsigned long n)
 {
-	write (1, &c, 1);
-	return (1);
-}
+	char const  *base;
 
-int	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	if (!str)
-		return (0);
-	while (str[i] != 0)
+	base = "0123456789abcdef";
+	if (n >= 16)
 	{
-		write (1, &str[i], 1);
-		i++;
+		ft_putnbr_adress(n / 16);
+		ft_putnbr_adress(n % 16);
 	}
-	return (i);
+	else
+    {
+		ft_putchar(base[n]);
+    }
 }

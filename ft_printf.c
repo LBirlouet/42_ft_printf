@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:04:34 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 15:48:56 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:14:16 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int	ft_printf2(const char *str, va_list lst)
 			if (str[i + 1] == '%')
 			{
 				j += ft_putchar('%');
-                i++;
+				i++;
 			}
 			else if (str[i + 1] != '%')
-            {
+			{
 				j += repartflag(str[i + 1], lst);
-                i++;
-            }
-        }
+				i++;
+			}
+		}
 		else
 		{
 			j += ft_putchar(str[i]);
@@ -57,13 +57,15 @@ int	ft_printf(const char *str, ...)
 }
 
 
-#include "stdio.h"
+// int main()
+// {
+// 	unsigned char const *s;
 
-int main()
-{
-	int i = 1586422;
-	int j = ft_printf("%X\n", i);
-	printf("%d\n", j);
 
-	printf("%d\n", printf("%X\n", i));
-}
+// 	int i = 1586422;
+// 	int j = ft_printf("%d %i %u %X %x %s %c %p\n", 15, 25, 35, 45, 55, "oui", 's', NULL);
+// 	printf("%d\n", j);
+
+// 	printf("%d\n", printf("%d %i %u %X %x %s %c %p\n", 15, 25, 35, 45, 55, "oui", 's', NULL));
+
+// }

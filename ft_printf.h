@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:17:02 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 18:19:42 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:33:29 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int		nbr_count_unsigned(unsigned int n);
 int		nbr_count_p(void const *p);
 int		ft_putstr(char *str);
 int		ft_putchar(char c);
+size_t	ft_strlen(const char *str);
 
 #endif

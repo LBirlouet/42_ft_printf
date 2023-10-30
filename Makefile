@@ -6,7 +6,7 @@
 #    By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/25 14:44:18 by lbirloue          #+#    #+#              #
-#    Updated: 2023/10/25 15:02:52 by lbirloue         ###   ########.fr        #
+#    Updated: 2023/10/30 15:56:35 by lbirloue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,13 @@ CFLAGS		=	-Wall -Wextra -Werror
 
 INCLUDES	=	-I libft.h
 
-SRCS		=	 \
+SRCS		=	utils_ft_printf.c \
+				utilsbase_ft_printf.c \
+				flags.c \
+				flag_X.c \
+				flag_xx.c \
+				counters.c \
+				ft_printf.c \
 
 
 OBJS		=	${SRCS:.c=.o}

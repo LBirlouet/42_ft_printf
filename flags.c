@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:05:49 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 18:23:27 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:48:32 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ int	repartflag(const char c, va_list lst)
 	else if (c == 'p')
 		count = nbr_count_p(va_arg(lst, void const *));
 	return (count);
+}
+
+int	ft_verif_flag(const char c)
+{
+	if (c == 'd' || c == 'i' || c == 'x' || c == 'X' || c == 'c' 
+		|| c == 's' || c == 'u' || c == 'p')
+		return (0);
+	return (-1);
 }

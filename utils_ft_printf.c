@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:36:28 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 18:50:35 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:58:03 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ size_t	ft_strlen(const char *str)
 
 int	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	if (write (1, &c, 1) == -1)
+		return (-1);
 	return (1);
 }
 
@@ -39,7 +40,8 @@ int	ft_putstr(char *str)
 		return (ft_putstr("(null)"));
 	while (str[i] != 0)
 	{
-		write (1, &str[i], 1);
+		if (write (1, &str[i], 1) == -1)
+			return (-1);
 		i++;
 	}
 	return (i);

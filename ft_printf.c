@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:04:34 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 18:45:59 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:57:18 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_printf2(const char *str, va_list lst)
 				j += ft_putchar('%');
 				i++;
 			}
-			else if (str[i + 1] != '%')
+			else if (str[i + 1] != '%' && ft_verif_flag(str[i + 1]) == 0)
 			{
 				j += repartflag(str[i + 1], lst);
 				i++;
@@ -64,8 +64,8 @@ int	ft_printf(const char *str, ...)
 // 	unsigned char const *s;
 
 
-// 	printf("%d\n", ft_printf("%"));
+// 	printf("%d\n", ft_printf("%%%%%\n"));
 
-// 	printf("%d\n", printf("%"));
+// 	printf("%d\n", printf("%%%%%\n"));
 
 // }

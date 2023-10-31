@@ -6,7 +6,7 @@
 /*   By: lbirloue <lbirloue@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:17:02 by lbirloue          #+#    #+#             */
-/*   Updated: 2023/10/30 18:33:29 by lbirloue         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:57:54 by lbirloue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 int		ft_printf(const char *str, ...);
 int		ft_printf2(const char *str, va_list lst);
 int		repartflag(const char c, va_list lst);
+int		ft_verif_flag(const char c);
 void	ft_putnbr(int n);
 int		nbr_hexa(unsigned int n, int i);
 void	ft_putnbr_hexalower(unsigned int n);

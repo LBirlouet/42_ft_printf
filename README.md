@@ -1,3 +1,12 @@
 # ft_printf
 
-This project is pretty straightforward, you have to recode printf. You will learn what is and how to implement variadic functions. Once you validate it, you will reuse this function in your future projects.
+The goal of the 'ft_printf' project is to recode the 'printf' function using certain permitted functions.
+
+## Allowed functions
+- malloc
+- free
+- write
+- va_start
+- va_arg
+- va_copy
+- va_end
